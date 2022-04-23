@@ -379,6 +379,8 @@
 
   .ViewCarFlex{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
@@ -510,4 +512,20 @@
     height:748px;
     }
 
+    .reviewMain .reviewScroll {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+
+}
+@media (min-width:1400px){
+
+    .ViewCarMain h2{
+     text-align: center;
+    }
+    
 }
