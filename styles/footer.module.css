@@ -97,6 +97,7 @@
 @media (min-width: 1184px) {
 
     .footer{
+        margin: 0;
         padding:20px 40px 0;
     }
 

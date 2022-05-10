@@ -8,7 +8,7 @@
 }
 
 .landingHeader{
-    margin: 60px auto 0;
+    margin: 5px auto 0;
     width: 100%;
     height: 375px;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@
 
    @media (max-width: 500px){
     .landingHeader{
-      margin: 60px auto 0;
+      margin: 5px auto 0;
       width: 100%;
       height: 265px;
       background-repeat: no-repeat;
@@ -206,7 +206,10 @@
     width: 70px;
     height: 70px;
     border: none;
-    display: block;
+  /* add display block to remove img placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0px auto 10px;
   }
 
@@ -241,7 +244,7 @@
 @media (min-width:768px){
 
   .landingHeader{
-    margin: 70px auto 0;
+    margin: 15px auto 0;
     height: 426px;
     padding: 80px;
     background-image: url(https://res.cloudinary.com/grootretro/image/upload/v1650486195/carpadi-website/lg_woman_ad_xurfrn.png);
@@ -379,72 +382,10 @@
 
   .ViewCarFlex{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: nowrap;
     overflow-x: auto;
   }
 
-  .ViewCarFlex .ViewCarDiv{
-    padding: 24px;
-    width: 276px;
-    height: 423px;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    margin: 10px 26px 30px 10px ;
-  }
-  
-  .ViewCarFlex .ViewCarDiv .ViewCarImgDiv{
-   display: block;
-   margin: 0 auto;
-   width: 228px;
-   height: 187px;
-  }
-
-  .ViewCarFlex .ViewCarDiv .ViewCarImgDiv img{
-   width: 100%;
-   border-radius: 8px;
-  }
-
-  .ViewCarFlex .ViewCarDiv .ViewCarText h2{
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
-    color: #000000;
-    margin: 8px 0px;
-  }
-
-  .ViewCarFlex .ViewCarDiv .ViewCarText h6{
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-    color: #243773;
-  }
-
-  .ViewCarFlex .ViewCarDiv .ViewCarText p{
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
-    color: #767676;
-  }
-
-  .ViewCarFlex .ViewCarDiv a{
-    display: flex;
-    margin: 20px auto;
-    width: 100%;
-    padding: 16px;
-    height: 48px;
-    background: #243773;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 18px;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    text-decoration: none;
-  }
 
 
 }
@@ -453,6 +394,7 @@
 @media (min-width:992px){
 
   .landingHeader{
+    margin: 60px auto 0;
     height: 560px;
     }
     
@@ -470,6 +412,7 @@
 
 @media (min-width:1140px){
   .landingHeader{
+    margin: 90px auto 0;
     height: 630px;
     padding: 120px;
     }
@@ -520,6 +463,14 @@
       overflow-x: auto;
     }
 
+    .ViewCarFlex{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
 
 }
 @media (min-width:1400px){
@@ -527,5 +478,6 @@
     .ViewCarMain h2{
      text-align: center;
     }
-    
+
+  
 }

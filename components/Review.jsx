@@ -5,7 +5,7 @@ export default function Review({userName, userComment, userImg}) {
   return (
     <div className={styles.reviewDiv}>
       <div className={styles.profilepic}>
-      <img src={userImg} onError="this.style.opacity='0'"/>
+      <img src={userImg} />
       </div>
         <h2>{userName}</h2>
         <p>{userComment}</p>
