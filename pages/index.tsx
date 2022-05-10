@@ -2,22 +2,19 @@ import type { NextPage } from 'next'
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 import { AiOutlineSearch } from "react-icons/ai";
-import { useState } from 'react';
 // components
-import MobileNavLinks from '../components/MobileNavLinks';
 import Howitworks from '../components/Howitworks.jsx'
 import Review from '../components/Review'
 import ViewCar from '../components/ViewCar'
 
 const Home: NextPage = () => {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
 
   return (
 <div className={styles.container}>
             {/* this is for mobile */}
     <div className='d-block d-md-none'>
-      <header className={styles.landingHeader} onClick={() => setMobileNavOpen(mobileNavOpen)}>
+      <header className={styles.landingHeader}>
            {/* change h1 and p to desired texts  */}
           <h1>Lorem ipsum dolor sit <br />amet, </h1>
           <p>Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit. </p>
@@ -40,14 +37,13 @@ const Home: NextPage = () => {
           <Review />
        </div>
 
-      <MobileNavLinks open={mobileNavOpen} />
     </div>
 
 
       {/* this is for desktop */}
   <div className='d-none d-md-block'>
 
-      <header className={styles.landingHeader} onClick={() => setMobileNavOpen(mobileNavOpen)}>
+      <header className={styles.landingHeader}>
         {/* change h1 and p to desired texts  */}
           <h1>Lorem ipsum dolor <br /> sit amet, </h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Pulvinar aenean porta facilisi pulvinar. </p>

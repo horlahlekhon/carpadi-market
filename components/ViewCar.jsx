@@ -1,21 +1,20 @@
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 
 
 
 
 export default function ViewCar({carImg, carName, carPrice, carDescription}) {
   return (
-    <div className={styles.ViewCarDiv}>
-        <div className={styles.ViewCarImgDiv}>
-        <img src={carImg} alt='carpadi-cars'/>
+    <div className="ViewCarDiv">
+        <div className="ViewCarImgDiv">
+        <img src={carImg} alt="carpadi-cars"/>
         </div>
-        <div className={styles.ViewCarText}>
+        <div className="ViewCarText">
             <h4>{carName}</h4>
             <h6>{carPrice}</h6>
             <p>{carDescription}</p>
         </div>
-            <Link href='/view'>
+            <Link href='/car_info'>
             <a>View this car</a>
             </Link>
     </div>

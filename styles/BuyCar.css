@@ -1,0 +1,331 @@
+.buycarMain{
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+}
+
+
+.close-recommend-button{
+   position: absolute;
+   top: -4%;
+   right: 0;
+   z-index: 10;
+}
+
+.nav-link {
+    position: relative;
+    padding: 5px 0 !important;
+    width: 80px !important;
+    height: 42px !important;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    margin: 0 4px !important;
+    background: rgb(163 163 163 / 10%) !important;
+    border-radius: 4px 4px 0px 0px !important;
+    font-weight: 400;
+    font-size: 10px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: #243773 !important;
+    cursor: pointer;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: rgb(255, 255, 255) !important;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #243773 !important;
+    border-bottom: 4px solid #243773;
+    border-radius: 4px !important;
+
+}
+
+.viewCarGrid{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+
+}
+
+.css-wjh20t-MuiPagination-ul {
+    margin: 10px;
+}
+
+button.MuiPaginationItem-previousNext.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+    border-radius: 50% !important;
+    border: none !important;
+    box-shadow: 4px 3px 22px rgb(0 0 0 / 25%) !important;
+    width: 40px;
+    height: 40px;
+}
+
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color:  #243773 !important;
+    color: #fff !important;
+}
+
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover {
+    background-color:  #243773 !important;
+}
+
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root{
+    height: 30px;
+    border: 1px solid #243773 !important;
+    margin: 0 5px;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+}
+
+
+
+button.MuiPaginationItem-previousNext.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root svg {
+    font-size: 30px;
+}
+
+
+@media (min-width: 768px){
+    .buycarMain{
+        display: block;
+        width: 100%;
+        margin: 50px 0;
+    }
+}
+
+
+@media (min-width: 992px){
+    .buycarMain{
+        display: block;
+        width: 100%;
+        margin: 150px 0;
+    }
+
+    .nav-link {
+        width: 115px !important;
+        height: 56px !important;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 25%;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .car-options{
+    display: flex !important;
+    flex-wrap: wrap;
+    /* padding-left: 0; */
+    margin: 50px 0 10px!important;
+    list-style: none;
+    border-color: gray;
+    border-radius: 48px;
+    padding: 2px !important;
+    background: #C4C4C4;
+    color: white;
+    width: 258px !important;
+    height: 47px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    }
+
+    .car-options .nav-link.active, .nav-pills .show>.nav-link {
+        color: #000 !important;
+        background-color: #ffffff  !important;
+        border-radius: 48px  !important;
+        padding: 8px 16px  !important;
+        width: 123px  !important;
+        text-align: center  !important;
+        height: 37px  !important;
+        font-weight: 600  !important;
+        font-size: 18px  !important;
+        border-bottom: none !important;
+    }
+
+    .car-options  .nav-link {
+        background: 0 0 !important;
+        border: 0 !important;
+        border-radius: 0.25rem !important;
+        padding: 8px 16px !important;
+        cursor: pointer !important;
+        /* font-weight: 600; */
+        /* font-size: 18px; */
+        color: black !important;
+        width: fit-content !important;
+        height: fit-content !important;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+     }
+
+     .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+        margin: 9px 0 !important;
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+        box-shadow: 0px 2px 4px rgb(0 0 0 / 25%)  !important;
+        
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root:first-of-type {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
+
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
+        border-bottom-left-radius:0px !important;
+        border-bottom-right-radius:0px !important;
+    }
+
+    .css-ahj2mt-MuiTypography-root {
+        font-family: "Roboto";
+        font-weight: 500 !important;
+        font-size: 18px !important;
+        line-height: 21px !important;
+        letter-spacing: 0.00938em;
+    }
+
+    .css-15v22id-MuiAccordionDetails-root {
+        padding: 0px 16px 16px !important;        
+    }
+
+    .css-i4bv87-MuiSvgIcon-root {
+        fill: #323232;
+    }
+
+    .brand-title{
+        font-weight: 500 !important;
+        font-size: 20px !important;
+        line-height: 40px !important;
+        text-decoration: underline;
+    }
+
+    .model-title{
+        font-weight: 500 !important;
+        font-size: 20px !important;
+        line-height: 40px !important;
+        text-decoration: underline;
+    }
+
+    .input-options{
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 1px solid #323232;
+    background-color: transparent;
+    border-radius: 50%;
+    }
+
+    .input-options:checked {
+    background-color:#323232;
+      }
+
+    .input-text{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 10px 6px;
+    }
+
+    .seemore-button{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: #11344F;
+        margin:10px 0;
+        cursor: pointer;
+    }
+
+    .num-sort-items{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        margin: 20px 0;
+    }
+
+    .num-sort-items h2{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .num-sort-items select{
+        color: #243773;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+    }
+    
+
+    .num-sort-items select:focus-visible{
+        outline: none;
+    }
+
+    .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root{
+        border: 2px solid #243773 !important;
+        font-weight: 500 !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+        /* height: 35px !important;
+        padding: 10px !important; */
+        margin: 0 12px;
+    }
+
+    button.MuiPaginationItem-previousNext.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+        width: 48px;
+        height: 48px;
+    }
+
+    button.MuiPaginationItem-previousNext.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root svg {
+        font-size: 34px;
+    }
+
+    .MuiPaginationItem-page {
+        min-width: 40px !important;
+        height: 40px !important;
+    }
+   
+    
+}
+
+@media (min-width: 1350px){
+    .nav {
+        justify-content: center;
+    }
+}
+
+
+/* .nav-link .active{
+    font-weight: 600 !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    color: #243773 !important;
+} */
