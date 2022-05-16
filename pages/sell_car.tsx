@@ -53,7 +53,17 @@ const sell_car = () => {
                 <label htmlFor="plate_number">Plate Number</label>
                 <input type="text" name="plate_number" placeholder='Ex: KJA-012-AB' />
                 <label htmlFor="registered_state">Registered State</label>
-      
+                <Form.Select id="reg_state" name='registered_state'>
+                <option>Ex: Lagos</option>
+                <option value="lagos">Lagos</option>
+                <option value="oyo">Oyo</option>
+                <option value="osun">Osun</option>
+                <option value="kano">Kano</option>
+                <option value="abuja">Abuja</option>
+                <option value="kaduna">Kaduna</option>
+                <option value="Imo">Imo</option>
+                <option value="enugu">Enugu</option>
+                </Form.Select>
                 <button>Proceed</button>
             </form>
          </div>

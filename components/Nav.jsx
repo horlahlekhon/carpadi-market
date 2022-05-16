@@ -181,11 +181,6 @@ const typographyStyle = {
                 <a onClick={() => setClickedLink(true)}>FAQ</a>
               </Link>
             </li>
-            <li>
-              <Link href='/'>
-                <a>Live Chat</a>
-              </Link>
-            </li>
             </div>
         </AccordionDetails>
       </Accordion>
