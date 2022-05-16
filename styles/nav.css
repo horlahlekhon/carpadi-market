@@ -1,3 +1,6 @@
+span.navigation-names:nth-child(1) {
+  display: none !important;
+}
 
   .navbar{
     position: fixed !important;
@@ -89,8 +92,6 @@
   padding: 10px;
 }
 
-
-
 .nav-search input{
   width: 100%;
   background: transparent;
@@ -155,6 +156,9 @@
 
 
   @media (min-width: 992px) { 
+    span.navigation-names:nth-child(1) {
+      display: flex !important;
+  }
 
     .offcanvas-end {
       display: none !important;

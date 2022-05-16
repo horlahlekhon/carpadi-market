@@ -1,39 +1,33 @@
 import React, { useEffect, useState } from 'react'
-import { Tab, Tabs } from 'react-bootstrap'
 import ImageCarousel, { ImageType } from "../components/image-carousel";
 import ItemName from '../components/ItemName'
 import ItemsCarousel from 'react-items-carousel';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Nav from '../components/Nav';
-import styled from 'styled-components';
 
 
-const Div = styled.div`
-header.navigation-wrapper.d-block.d-lg-blo:nth-child(2){
-    display: none !important;
-}
-
-@media (min-width: 992px){
-  header.navigation-wrapper.d-block.d-lg-blo:nth-child(2){
-    display: block !important;
-}
-}
-`
 
 const car_info = () => {
     const [images, setImages] = useState<ImageType[]>();
     const [activeItemIndex, setActiveItemIndex] = useState(0);
-    const noOfItems = 7;
-    const noOfCards = 2;
-    const chevronWidth = 60;
 
     useEffect(() => {
+      //for small and medium screen
       setImages(
         Array.from(Array(3).keys()).map((id) => ({
           id,
           url: `https://res.cloudinary.com/grootretro/image/upload/v1651700077/carpadi-website/carInfoview-big_trkuud.png`
         }))
       );
+
+
+      //function that handles the resize
+      // if width is 992, change array size to 5
+      //or if width is less than 992, change array size to 3
+
+      // Note: this function isnt important
+      // this Function might not be needful, it is just for
+      //  the Ui Demonstartion
       function handleResize(){
       if (window.innerWidth > 992){
         setImages(
@@ -53,21 +47,25 @@ const car_info = () => {
       }
         }
 
+      //also both eventlistener aint important  
       window.addEventListener("resize", handleResize)
       return () => window.removeEventListener("resize", handleResize)
       
       }, []);
 
   return (
-    <Div>
     <div className="InfoMain">
      
-      <Nav smSearchFormDisplay='block' searchFormDisplay="flex" buyLinkDisplay="none"/>
+      <Nav 
+       smSearchFormDisplay='block' 
+       searchFormDisplay="flex"
+       buyLinkDisplay="none"
+       faqSize="20px"
+       faqWeight="300"
+       />
+
       <div className='d-block d-lg-none'>
-      <Tabs
-      id="controlled-tab-example"
-      className="mb-3 info">
-      <Tab eventKey="info" title="Vehicle Information">
+     
       <ImageCarousel images={images} />
 
       <div className='carInfoDetail'>
@@ -226,13 +224,6 @@ const car_info = () => {
               )}
             </ItemsCarousel>
           </div>
-      </Tab>
-      <Tab eventKey="inspect" title="Vehicle Inspection">
-        <div className='vehicle-inspection'>
-        Don't know what is going into this Tab
-        </div>
-      </Tab>
-    </Tabs>  
     </div>
 
     {/* Note: ``The Div "carinfoDetail" and it is children(for large screen) will be in
@@ -248,10 +239,6 @@ const car_info = () => {
     `` */}
 
     <div className='d-none d-lg-block'>
-    <Tabs
-      id="controlled-tab-example"
-      className="mb-3 info">
-      <Tab eventKey="info" title="Vehicle Information">
       <ImageCarousel images={images} />
 
       
@@ -445,16 +432,8 @@ const car_info = () => {
             </ItemsCarousel>
           </div>
 
-      </Tab>
-      <Tab eventKey="inspect" title="Vehicle Inspection">
-      <div className='vehicle-inspection'>
-        Don't know what is going into this Tab
-        </div>
-      </Tab>
-    </Tabs>  
     </div>
     </div>
-    </Div>
   )
 }
 

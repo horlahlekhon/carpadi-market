@@ -27,7 +27,10 @@ const Home: NextPage = () => {
       </form>
       </header>
 
-      <Howitworks />
+    <div className={styles.instructionContainer}>
+    <Howitworks />
+    </div>
+      
 
  {/* images go into the userImg props */}
       <div className={styles.reviewMain}>
@@ -56,7 +59,9 @@ const Home: NextPage = () => {
         </form>
       </header>
 
-      <Howitworks />
+      <div className={styles.instructionContainer}>
+    <Howitworks />
+    </div>
 
        {/* images go into the userImg props */}
       <div className={styles.reviewMain}>
