@@ -78,7 +78,7 @@ const vehicle_info = () => {
       {currentPage === 2 && (
         <CustomerDetails prev={prev} next={next}/>
       )}
-
+ {/* //this is for STEP FOUR(worth range) */}
       {currentPage === 3 && (
         <>
          <WorthRange prev={prev} handleSubmit={handleSubmit}/>
@@ -127,7 +127,7 @@ const vehicle_info = () => {
       {currentPage === 2 && (
         <CustomerDetails prev={prev} next={next}/>
       )}
-
+{/* //this is for STEP FOUR(worth range) */}
       {currentPage === 3 && (
         <>
          <WorthRange prev={prev} handleSubmit={handleSubmit}/>

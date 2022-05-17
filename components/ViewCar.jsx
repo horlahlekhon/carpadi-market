@@ -14,7 +14,7 @@ export default function ViewCar({carImg, carName, carPrice, carDescription}) {
             <h6>{carPrice}</h6>
             <p>{carDescription}</p>
         </div>
-            <Link href='/car_info'>
+            <Link href='/car-info'>
             <a>View this car</a>
             </Link>
     </div>

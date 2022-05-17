@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import React from 'react'
-import GrClose from "react-icons/gr";
 
 const SuccessModal = ({setModalDisplay}) => {
   return (
-      <div className='modal_main'>
+    <div className='modal_main'>
     <div className='successModal_container'>
         <div className='success_close' onClick={setModalDisplay}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="d-block d-lg-none" viewBox="0 0 16 16">
@@ -20,7 +19,7 @@ const SuccessModal = ({setModalDisplay}) => {
         <h5>Your request has been sent,
          we will surely get back to you as soon as possible</h5>
          <Link href='/'>
-         <a className='backtohomepage_btn'>
+         <a className='backtohomepage_btn' onClick={setModalDisplay}>
          Back to Home page
          </a>
          </Link>

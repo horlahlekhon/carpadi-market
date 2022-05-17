@@ -226,6 +226,11 @@ span.navigation-names:nth-child(1) {
       line-height: 21px;
       color: #243773;
     }
+
+    .faq-lg-link:hover{
+      color: #243773;
+    }
+
    }
 
 

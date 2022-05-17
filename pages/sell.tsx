@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react'
+// @ts-nocheck
+import React, { useState } from 'react'
 import { Form, Tab, Tabs } from 'react-bootstrap'
+import SelectSearch, { fuzzySearch } from "react-select-search";
 import {createGlobalStyle }from 'styled-components'
 import Howitworks from '../components/Howitworks'
 
@@ -19,6 +21,341 @@ const GlobalStyle = createGlobalStyle`
 
 
 const sell_car = () => {
+    const [value, setValue] = useState("");
+
+    const registeredStatesOptions = [
+        {
+          name: "Lagos",
+          value: "lagos",
+        },
+        {
+          name: "Osun",
+          value: "osun",
+        },
+        {
+          name: "Oyo",
+          value: "oyo",
+        },
+        {
+          name: "Kano",
+          value: "kano"
+        },
+        {
+          name: "Abuja",
+          value: "abuja",
+        },
+        {
+          name: "Kaduna",
+          value: "kaduna",
+        },
+        {
+          name: "Imo",
+          value: "imo",
+        },
+        {
+          name: "Enugu",
+          value: "enugu",
+        },
+      ];
+
+
+      const makeOptions = [
+          {
+              name: "Lexus",
+              value:"lexus"
+          },
+          {
+              name: "Toyota",
+              value:"toyota"
+          },
+          {
+              name: "Benz",
+              value:"benz"
+          },
+          {
+              name: "Acura",
+              value:"acura"
+          },
+          {
+              name: "Honda",
+              value:"honda"
+          },
+          {
+              name: "Ford",
+              value:"ford"
+          },
+          {
+              name: "Peugeot",
+              value:"peugeot"
+          },
+          {
+              name: "Landrover",
+              value:"landrover"
+          },
+          {
+              name: "Mazda",
+              value:"mazda"
+          },
+      ];
+
+      const modelOptions = [
+          {
+              name: 'Lexus IS',
+              value:'lexus_is'
+          },
+          
+          {
+              name: 'Lexus ES',
+              value:'lexus_es'
+          },
+          {
+              name: 'Lexus GS',
+              value:'lexus_gs'
+          },
+          {
+              name: 'Lexus GS F',
+              value:'lexus_gsf'
+          },
+          {
+              name: 'Toyota Highlander',
+              value:'toyota_highlander'
+          },
+          {
+              name: 'Toyota 4Runner',
+              value:'toyota_4runner'
+          },
+          {
+              name: 'Toyota Tacoma',
+              value:'toyota_tacoma'
+          },
+          {
+              name: 'Toyota Tundra',
+              value:'toyota_tundra'
+          },
+          {
+              name: 'Mercedes-Benz C-Class',
+              value:'mercedes-benz_Cclass'
+          },
+          {
+              name: 'Mercedes-Benz E-Class',
+              value:'mercedes-benz_Eclass'
+          },
+          {
+              name: 'Mercedes-Benz GLC',
+              value:'mercedes-benz_glc'
+          },
+          {
+            name: 'Mercedes-Benz S-Class',
+            value:'mercedes-benz_Sclass'
+          },
+          {
+            name: 'Mercedes-Benz GLS',
+            value:'mercedes-benz_gls'
+          },
+          {
+            name: 'Acura MDX',
+            value:'acura_mdx'
+          },
+          {
+            name: 'Acura RDX',
+            value:'acura_rdx'
+          },
+          {
+            name: 'Acura TLX',
+            value:'acura_tlx'
+          },
+          {
+            name: 'Acura ILX',
+            value:'acura_ilx'
+          },
+          {
+            name: 'Honda Life',
+            value:'honda_life'
+          },
+          {
+            name: 'Honda Passport',
+            value:'honda_passport'
+          },
+          {
+            name: 'Honda Prelude',
+            value:'honda_prelude'
+          },
+          {
+            name: 'Honda Stream',
+            value:'honda_stream'
+          },
+          {
+            name: 'Ford Escort 3 Doors',
+            value:'ford_escort3doors'
+          },
+          {
+            name: 'Ford Escort 4 Doors',
+            value:'ford_escort4doors'
+          },
+          {
+            name: 'Ford Escort 5 Doors',
+            value:'ford_escort5doors'
+          },
+          {
+            name: 'Ford Escort Cabrio',
+            value:'ford_escortcabrio'
+          },
+          {
+            name: 'Peugeot 104',
+            value:'peugeot_104'
+          },
+          {
+            name: 'Peugeot 106',
+            value:'peugeot_106'
+          },
+          {
+            name: 'Peugeot 107',
+            value:'peugeot_107'
+          },
+          {
+            name: 'Peugeot 108',
+            value:'peugeot_108'
+          },
+          {
+            name: 'Landrover Range Rover Sport',
+            value:'landrover_rangeroversport'
+          },
+          {
+            name: 'Landrover Range Rover',
+            value:'landrover_rangerover'
+          },
+          {
+            name: 'Landrover Defender 90',
+            value:'landrover_defender90'
+          },
+          {
+            name: 'Landrover Discovery Sport',
+            value:'landrover_discoverysport'
+          },
+          {
+            name: 'Mazda 6/Axela Hatchback',
+            value:'mazda_6axelahatchback'
+          },
+          {
+            name: 'Mazda CX-3',
+            value:'mazda_cx3'
+          },
+          {
+            name: 'Mazda CX-5',
+            value:'mazda_cx5'
+          },
+          {
+            name: 'Mazda CX-9',
+            value:'mazda_cx9'
+          },
+      ]
+
+  
+      const yearOptions = [
+          {
+              name: '2021',
+              value: '2021'
+          },
+          {
+              name: '2020',
+              value: '2020'
+          },
+          {
+              name: '2019',
+              value: '2019'
+          },
+          {
+              name: '2018',
+              value: '2018'
+          },
+          {
+              name: '2017',
+              value: '2017'
+          },
+          {
+              name: '2016',
+              value: '2016'
+          },
+          {
+              name: '2015',
+              value: '2015'
+          },
+          {
+              name: '2014',
+              value: '2014'
+          },
+          {
+              name: '2013',
+              value: '2013'
+          },
+          {
+              name: '2012',
+              value: '2012'
+          },
+          {
+              name: '2011',
+              value: '2011'
+          },
+          {
+              name: '2010',
+              value: '2010'
+          },
+          {
+              name: '2009',
+              value: '2009'
+          },
+          {
+              name: '2008',
+              value: '2008'
+          },
+          {
+              name: '2007',
+              value: '2007'
+          },
+          {
+              name: '2006',
+              value: '2006'
+          },
+          {
+              name: '2005',
+              value: '2005'
+          },
+          {
+              name: '2004',
+              value: '2004'
+          },
+          {
+              name: '2003',
+              value: '2003'
+          },
+          {
+              name: '2002',
+              value: '2002'
+          },
+          {
+              name: '2001',
+              value: '2001'
+          },
+          {
+              name: '2000',
+              value: '2000'
+          },
+      ]
+
+      const trimOptions = [
+          {
+              name: 'Base',
+              value: 'base'
+          },
+          {
+              name: 'Mid',
+              value: 'mid'
+          },
+          {
+              name: 'High-End',
+              value: 'highend'
+          },
+      ]
 
 
   return (
@@ -39,32 +376,30 @@ const sell_car = () => {
 
             <a href="#link">Where is my VIN?</a>
 
-            <form className='vin-form' action='/vehicle_info'>
+            <form className='vin-form' action='/vehicle-info'>
                 <label htmlFor="vin">VIN</label>
                 <input type="text" name="vin" placeholder='Ex:1GCCW8H7CR161832' />
-                <button>Proceed</button>
+                <button className='submit-btn'>Proceed</button>
             </form>
          </div>
         </Tab>
         <Tab eventKey="license-plate" title="License Plate">
         <div className='license-plate-container'>
             <h2>Enter Your Vehicle Information</h2>
-            <form className='license-plate-form' action='/vehicle_info'>
+            <form className='license-plate-form' action='/vehicle-info'>
                 <label htmlFor="plate_number">Plate Number</label>
-                <input type="text" name="plate_number" placeholder='Ex: KJA-012-AB' />
+                <input className='license-plate-input' type="text" name="plate_number" placeholder='Ex: KJA-012-AB' />
                 <label htmlFor="registered_state">Registered State</label>
-                <Form.Select id="reg_state" name='registered_state'>
-                <option>Ex: Lagos</option>
-                <option value="lagos">Lagos</option>
-                <option value="oyo">Oyo</option>
-                <option value="osun">Osun</option>
-                <option value="kano">Kano</option>
-                <option value="abuja">Abuja</option>
-                <option value="kaduna">Kaduna</option>
-                <option value="Imo">Imo</option>
-                <option value="enugu">Enugu</option>
-                </Form.Select>
-                <button>Proceed</button>
+                {/* add more states if u want */}
+                <SelectSearch
+                    options={registeredStatesOptions}
+                    value={value}
+                    onChange={setValue}
+                    search
+                    filterOptions={fuzzySearch}
+                    placeholder="Ex: Lagos"
+                 />
+                <button className='submit-btn'>Proceed</button>
             </form>
          </div>
         </Tab>
@@ -73,10 +408,17 @@ const sell_car = () => {
             <h2>Enter Your Vehicle Information</h2>
             <p>We recommend entering your VIN or Plate number. with that, 
                 we can give you an instant cash offer in most case</p>
-            <form className='make_model-form' action='/vehicle_info'>
+            <form className='make_model-form' action='/vehicle-info'>
                 <label htmlFor="make">Make</label>
-               {/* add more states if u want */}
-                <Form.Select id="make_model_select" name='make'>
+                <SelectSearch
+                   id="make_model_select"
+                    options={makeOptions}
+                    value={value}
+                    onChange={setValue}
+                    search
+                    filterOptions={fuzzySearch}
+                 />
+                {/* <Form.Select id="make_model_select" name='make'>
                 <option></option>
                 <option value="lexus">Lexus</option>
                 <option value="toyota">Toyota</option>
@@ -87,12 +429,19 @@ const sell_car = () => {
                 <option value="peugeot">Peugeot</option>
                 <option value="landrover">Landrover</option>
                 <option value="mazda">Mazda</option>
-                </Form.Select>
+                </Form.Select> */}
                 <label htmlFor="model">Model</label>
-               {/* add more states if u want */}
-                <Form.Select id="make_model_select" name='model'>
+                <SelectSearch
+                   id="make_model_select"
+                    options={modelOptions}
+                    value={value}
+                    onChange={setValue}
+                    search
+                    filterOptions={fuzzySearch}
+                 />
+                {/* <Form.Select id="make_model_select" name='model'> */}
                 {/* list of lexus car models, change if needed */}
-                <option></option>
+                {/* <option></option>
                 <option value="lexus_is">Lexus IS</option>
                 <option value="lexus_es">Lexus ES</option>
                 <option value="lexus_gs">Lexus GS</option>
@@ -105,9 +454,9 @@ const sell_car = () => {
                 <option value="lexus_lx">Lexus LX</option>
                 <option value="lexus_rc">Lexus RC</option>
                 <option value="lexus_rcf">Lexus RC F</option>
-                <option value="lexus_lc">Lexus LC</option>
+                <option value="lexus_lc">Lexus LC</option> */}
                 {/* list of toyota car models, change if needed */}
-                <option value="toyota_avalon">Toyota Avalon</option>
+                {/* <option value="toyota_avalon">Toyota Avalon</option>
                 <option value="toyota_camry">Toyota Camry</option>
                 <option value="toyota_corolla">Toyota Corolla</option>
                 <option value="toyota_prius">Toyota Prius</option>
@@ -119,9 +468,9 @@ const sell_car = () => {
                 <option value="toyota_highlander">Toyota Highlander</option>
                 <option value="toyota_4runner">Toyota 4Runner</option>
                 <option value="toyota_tacoma">Toyota Tacoma</option>
-                <option value="toyota_tundra">Toyota Tundra</option>
+                <option value="toyota_tundra">Toyota Tundra</option> */}
                 {/* list of benz car models, change if needed */}
-                <option value="mercedes-benz_gla">Mercedes-Benz GLA</option>
+                {/* <option value="mercedes-benz_gla">Mercedes-Benz GLA</option>
                 <option value="mercedes-benz_Cclass">Mercedes-Benz C-Class</option>
                 <option value="mercedes-benz_Eclass">Mercedes-Benz E-Class</option>
                 <option value="mercedes-benz_glc">Mercedes-Benz GLC</option>
@@ -147,9 +496,9 @@ const sell_car = () => {
                 <option value="mercedes-benz_amggla35">Mercedes-Benz AMG GLA 35</option>
                 <option value="mercedes-benz_amgglc43">Mercedes-Benz AMG GLC 43</option>
                 <option value="mercedes-benz_amggt4door">Mercedes-Benz AMG GT 4-Door</option>
-                <option value="mercedes-benz_glccoupe">Mercedes-Benz GLC Coupe</option>
+                <option value="mercedes-benz_glccoupe">Mercedes-Benz GLC Coupe</option> */}
                 {/* list of acura car models, change if needed */}
-                <option value="acura_mdx">Acura MDX</option>
+                {/* <option value="acura_mdx">Acura MDX</option>
                 <option value="acura_rdx">Acura RDX</option>
                 <option value="acura_tlx">Acura TLX</option>
                 <option value="acura_ilx">Acura ILX</option>
@@ -168,9 +517,9 @@ const sell_car = () => {
                 <option value="acura_slx">Acura SLX</option>
                 <option value="acura_tl">Acura TL</option>
                 <option value="acura_tsx">Acura TSX</option>
-                <option value="acura_zdx">Acura ZDX</option>
+                <option value="acura_zdx">Acura ZDX</option> */}
                 {/* list of honda car models, change if needed */}
-                <option value="honda_fit">Honda Fit</option>
+                {/* <option value="honda_fit">Honda Fit</option>
                 <option value="honda_accord">Honda Accord</option>
                 <option value="honda_civic_hybrid">Honda Civic Hybrid</option>
                 <option value="honda_crv">Honda CR-V</option>
@@ -239,9 +588,9 @@ const sell_car = () => {
                 <option value="honda_crvlimitededition">Honda CR-V Limited Edition</option>
                 <option value="honda_civicgti">Honda Civic GTi</option>
                 <option value="honda_remix">Honda Remix</option>
-                <option value="honda_crosstour">Honda Crosstour</option>
+                <option value="honda_crosstour">Honda Crosstour</option> */}
                  {/* list of ford car models, change if needed */}
-                 <option value="ford_focuswagon">Ford Focus Wagon</option>
+                 {/* <option value="ford_focuswagon">Ford Focus Wagon</option>
                  <option value="ford_wildtrak">Ford Wildtrak</option>
                  <option value="ford_rangerdoublecab">Ford Ranger Double Cab</option>
                  <option value="ford_expedition">Ford Expedition</option>
@@ -346,9 +695,9 @@ const sell_car = () => {
                  <option value="ford_taurusx">Ford Taurus X</option>
                  <option value="ford_thunderbird">Ford Thunderbird</option>
                  <option value="ford_windstar">Ford Windstar</option>
-                 <option value="ford_zodiac">Ford Zodiac</option>
+                 <option value="ford_zodiac">Ford Zodiac</option> */}
                     {/* list of peugeot car models, change if needed */}
-                <option value="peugeot_208">Peugeot 208</option>
+                {/* <option value="peugeot_208">Peugeot 208</option>
                 <option value="peugeot_308">Peugeot 308</option>
                 <option value="peugeot_301">Peugeot 301</option>
                 <option value="peugeot_408">Peugeot 408</option>
@@ -393,9 +742,9 @@ const sell_car = () => {
                 <option value="peugeot_j9">Peugeot J9</option>
                 <option value="peugeot_p4">Peugeot P4</option>
                 <option value="peugeot_bipper">Peugeot Bipper</option>
-                <option value="peugeot_bippertepee">Peugeot Tepee</option>
+                <option value="peugeot_bippertepee">Peugeot Tepee</option> */}
                  {/* list of landrover car models, change if needed */}
-                 <option value="landrover_rangeroversport">Landrover Range Rover Sport</option>
+                 {/* <option value="landrover_rangeroversport">Landrover Range Rover Sport</option>
                  <option value="landrover_rangerover">Landrover Range Rover</option>
                  <option value="landrover_defender90">Landrover Defender 90</option>
                  <option value="landrover_discoverysport">Landrover Discovery Sport</option>
@@ -410,9 +759,9 @@ const sell_car = () => {
                  <option value="landrover_discoverysvx">Landrover Discovery SVX</option>
                  <option value="landrover_rangerovervelar">Landrover Range Rover Velar</option>
                  <option value="landrover_freelander">Landrover Freelander</option>
-                 <option value="landrover_rangerover3doors">Landrover Range Rover 3 Doors</option>
+                 <option value="landrover_rangerover3doors">Landrover Range Rover 3 Doors</option> */}
                   {/* list of mazda car models, change if needed */}
-                <option value="mazda_2demio">Mazda 2/Demio</option>
+                {/* <option value="mazda_2demio">Mazda 2/Demio</option>
                 <option value="mazda_6atenzasedan">Mazda 6/Atenza Sedan</option>
                 <option value="mazda_6axelasedan">Mazda 6/Axela Sedan</option>
                 <option value="mazda_6axelahatchback">Mazda 6/Axela Hatchback</option>
@@ -453,10 +802,18 @@ const sell_car = () => {
                 <option value="mazda_tribute">Mazda Tribute</option>
                 <option value="mazda_xedos6">Mazda Xedos 6</option>
                 <option value="mazda_xedos9">Mazda Xedos 9</option>
-                </Form.Select>
+                </Form.Select> */}
                 <label htmlFor="year">Year</label>
-               {/* add more states if u want */}
-                <Form.Select id="make_model_select" name='year'>
+                <SelectSearch
+                   id="make_model_select"
+                    options={yearOptions}
+                    value={value}
+                    onChange={setValue}
+                    search
+                    filterOptions={fuzzySearch}
+                 />
+
+                {/* <Form.Select id="make_model_select" name='year'>
                 <option></option>
                 <option value="2021">2021</option>
                 <option value="2020">2020</option>
@@ -480,16 +837,23 @@ const sell_car = () => {
                 <option value="2002">2002</option>
                 <option value="2001">2001</option>
                 <option value="2000">2000</option>
-                </Form.Select>
+                </Form.Select> */}
                 <label htmlFor="trim">Trim</label>
-               {/* add more states if u want */}
-                <Form.Select id="make_model_select" name='trim'>
+                <SelectSearch
+                   id="make_model_select"
+                    options={trimOptions}
+                    value={value}
+                    onChange={setValue}
+                    search
+                    filterOptions={fuzzySearch}
+                 />
+                {/* <Form.Select id="make_model_select" name='trim'>
                 <option></option>
                 <option value="base">Base</option>
                 <option value="mid">Mid</option>
                 <option value="highend">High-End</option>
-                </Form.Select>
-                <button>Proceed</button>
+                </Form.Select> */}
+                <button className='submit-btn'>Proceed</button>
             </form>
          </div>
         </Tab>

@@ -547,7 +547,7 @@ const BuyCar = () => {
       </Navigation.Item>
     </Navigation>
 
-    <Tab.Content style={{width: '100%'}}>
+    <Tab.Content style={{width: '278px'}}>
       <Tab.Pane eventKey="first">
       <Accordion>
         <AccordionSummary

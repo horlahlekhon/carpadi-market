@@ -27,7 +27,7 @@ const VehicleDetails = ({next}) => {
                 <label htmlFor="mileage">Mileage</label>
                 <input type="text" name="mileage" placeholder='Ex:15000' />
                 <div className='form-btns'>
-                    <Link href='/sell_car'>
+                    <Link href='/sell'>
                     <a className='back_btn'>Back</a>
                     </Link>
                     <button className='next_btn' onClick={next}>Next</button>

@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       
 
  {/* images go into the userImg props */}
-      <div className={styles.reviewMain}>
+      <div className={styles.reviewMain} id="getToReview">
         <h1>Here’s what our <br />Customers are saying </h1>
           <Review />
           <Review />
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
     </div>
 
        {/* images go into the userImg props */}
-      <div className={styles.reviewMain}>
+      <div className={styles.reviewMain} id="getToReview">
         <h1>Here’s what our Customers are saying </h1>
         <div className={styles.reviewScroll}>
           <Review />
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
         <ViewCar />
         <ViewCar />
         </div>
-            <Link href=''>
+            <Link href='/buy'>
               <a className={styles.ViewAllCarButton}>View All Cars</a>
             </Link>
       </div>

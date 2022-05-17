@@ -11,7 +11,7 @@ const CarEdit = () => {
             <h4>2003 Acura MDX</h4>
             <p>Trim: Base 4D SUV</p>
             </div>
-            <Link href="/sell_car">
+            <Link href="/sell">
             <a className='edit-btn'>
                 Edit
             </a>

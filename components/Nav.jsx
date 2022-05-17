@@ -116,12 +116,12 @@ const typographyStyle = {
         <AccordionDetails>
             <div className='menu-list'>
             <li>
-              <Link href='/buy_car'>
+              <Link href='/buy'>
                 <a>New Cars</a>
               </Link>
             </li>
             <li>
-              <Link href='/buy_car'>
+              <Link href='/buy'>
                 <a>Used Cars</a>
               </Link>
             </li>
@@ -149,7 +149,7 @@ const typographyStyle = {
         <AccordionDetails>
           <div className='menu-list'>
             <li>
-              <Link href='/sell_car'>
+              <Link href='/sell'>
                 <a>Sell Car</a>
               </Link>
             </li>
@@ -177,8 +177,8 @@ const typographyStyle = {
         <AccordionDetails>
           <div className='menu-list'>
             <li>
-              <Link href='/'>
-                <a onClick={() => setClickedLink(true)}>FAQ</a>
+              <Link href='/faq'>
+                <a>FAQ</a>
               </Link>
             </li>
             </div>
@@ -239,10 +239,10 @@ const typographyStyle = {
                   </a>
                 </Link>
                 <div className='car-trade'>
-                <Link href='/buy_car'>
+                <Link href='/buy'>
                 <a style={{display: `${buyLinkDisplay}`}}>Buy Car</a>
                 </Link>
-                <Link href='/sell_car'>
+                <Link href='/sell'>
                 <a>Sell Your Car</a>
                 </Link>
                 <form style={{display: `${searchFormDisplay}`}} className='nav-search' onClick={SearchSubmission }>
