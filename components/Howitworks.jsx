@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 
-export default function Howitworks() {
+export default function Howitworks({lgAd}) {
   return (
     <div className={styles.instructionMain}>
             {/* this is for mobile */}
@@ -42,7 +42,7 @@ export default function Howitworks() {
             
       <h2>How Carpadi Works</h2>
       <div className={styles.instructFlexDiv}>
-      <img src='https://res.cloudinary.com/grootretro/image/upload/v1650486192/carpadi-website/lg_buy_sell_ad_xczzg5.png' alt='man-advertiser'/>
+      <img src={lgAd} alt='man-advertiser'/>
 
         <div className={styles.instructDescriptionDiv}>
               <div className={styles.instructions}>
@@ -71,4 +71,9 @@ export default function Howitworks() {
         </div>
     </div>
   )
+}
+
+
+Howitworks.defaultProps = {
+ lgAd: 'https://res.cloudinary.com/grootretro/image/upload/v1650486192/carpadi-website/lg_buy_sell_ad_xczzg5.png'
 }

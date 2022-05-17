@@ -14,19 +14,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components';
 
 
-
-const Div = styled.div`
-header.navigation-wrapper.d-block.d-lg-blo:nth-child(2){
-    display: none !important;
-}
-
-@media (min-width: 992px){
-  header.navigation-wrapper.d-block.d-lg-blo:nth-child(2){
-    display: block !important;
-}
-}
-`
-
 const BuyCar = () => {
 
   const [recommendedDisplay, setRecommendedDisplay] = useState(true)
@@ -40,14 +27,21 @@ const BuyCar = () => {
 
   return (
    
-   <Div>
-   <Nav smSearchFormDisplay='block' searchFormDisplay="flex" buyLinkDisplay="none"/>
+   <>
+   <Nav 
+    smSearchFormDisplay='block'
+    searchFormDisplay="flex" 
+    buyLinkDisplay="none"
+    faqSize="20px"
+    faqWeight="300"
+    />
     <div className='buycarMain d-block d-lg-none'>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
       <Navigation variant="pills" style={{
          display: 'flex',
          flexWrap: 'nowrap',
          overflowX: 'auto',
+         
       }}>
         <Navigation.Item style={{display: `${recommendedDisplay ? 'block' : 'none'}`}}>
           <Navigation.Link eventKey="first" >
@@ -553,7 +547,7 @@ const BuyCar = () => {
       </Navigation.Item>
     </Navigation>
 
-    <Tab.Content style={{width: '100%'}}>
+    <Tab.Content style={{width: '278px'}}>
       <Tab.Pane eventKey="first">
       <Accordion>
         <AccordionSummary
@@ -1294,7 +1288,7 @@ const BuyCar = () => {
   </div>
       </Tab.Container>
     </div>
-    </Div>
+    </>
   )
 }
 

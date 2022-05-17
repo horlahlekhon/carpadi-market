@@ -13,12 +13,10 @@ import { Navbar, Container, Offcanvas } from 'react-bootstrap';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdClose } from 'react-icons/md';
 
-// import { Link as Anchor } from 'gatsby';
 
-
-
-function Nav({buyLinkDisplay, searchFormDisplay, smSearchFormDisplay}) {
-  const [expanded, setExpanded] = React.useState('panel1');
+function Nav({buyLinkDisplay, searchFormDisplay, smSearchFormDisplay, faqWeight, faqSize}) {
+  const [expanded, setExpanded] = useState('panel1');
+  const [searchValue, setSearchValue] = useState("")
   const [changeExpanded, setChangeExpanded] = useState(true)
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -29,6 +27,15 @@ function Nav({buyLinkDisplay, searchFormDisplay, smSearchFormDisplay}) {
     event.preventDefault()
   }
 
+  //function to handle SearchInput
+  const handleSearchInput = (e) => {
+    setSearchValue(e.target.search);
+  }
+
+  //function to reset the searchinput
+  const resetSearchInput = () => {
+    setSearchValue("");
+  }
 
 const typographyStyle = {
   fontFamily: 'Roboto',
@@ -43,9 +50,6 @@ const typographyStyle = {
   ))(({ theme }) => ({
     border: `1px solid ${theme.palette.divider}`,
     padding: '10px 0',
-
-/* Deep Grey */
-
 
     '&:not(:last-child)': {
       borderBottom: 0,
@@ -112,12 +116,12 @@ const typographyStyle = {
         <AccordionDetails>
             <div className='menu-list'>
             <li>
-              <Link href='/buy_car'>
+              <Link href='/buy'>
                 <a>New Cars</a>
               </Link>
             </li>
             <li>
-              <Link href='/buy_car'>
+              <Link href='/buy'>
                 <a>Used Cars</a>
               </Link>
             </li>
@@ -129,11 +133,12 @@ const typographyStyle = {
           <Typography style={typographyStyle}>Search for Cars</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <form className='nav-search' onClick={SearchSubmission }>
+          <form className='nav-search' onClick={SearchSubmission}>
           <div>
         <AiOutlineSearch style={{fontSize: '30px', color: '#212120',opacity: '0.3'}}/>
         </div>
-            <input name='search'type='text' placeholder='Search cars, Brand, Year.......'/>
+            <input name='search' type='text' value={searchValue} onChange={handleSearchInput} placeholder='Search cars, Brand, Year.......'/>
+            <MdClose onClick={resetSearchInput} style={{fontSize: '24px', color: '#243773', cursor: 'pointer'}}/>
           </form>
         </AccordionDetails>
       </Accordion>
@@ -144,7 +149,7 @@ const typographyStyle = {
         <AccordionDetails>
           <div className='menu-list'>
             <li>
-              <Link href='/'>
+              <Link href='/sell'>
                 <a>Sell Car</a>
               </Link>
             </li>
@@ -172,13 +177,8 @@ const typographyStyle = {
         <AccordionDetails>
           <div className='menu-list'>
             <li>
-              <Link href='/'>
-                <a onClick={() => setClickedLink(true)}>FAQ</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a>Live Chat</a>
+              <Link href='/faq'>
+                <a>FAQ</a>
               </Link>
             </li>
             </div>
@@ -239,19 +239,20 @@ const typographyStyle = {
                   </a>
                 </Link>
                 <div className='car-trade'>
-                <Link href='/buy_car'>
+                <Link href='/buy'>
                 <a style={{display: `${buyLinkDisplay}`}}>Buy Car</a>
                 </Link>
-                <Link href=''>
+                <Link href='/sell'>
                 <a>Sell Your Car</a>
                 </Link>
                 <form style={{display: `${searchFormDisplay}`}} className='nav-search' onClick={SearchSubmission }>
                   <div>
                 <AiOutlineSearch style={{fontSize: '30px', color: '#212120',opacity: '0.3'}}/>
                 </div>
-                <input name='search'type='text' placeholder='Search cars, Brand, Year.......'/>
+                
+                <input name='search'type='text' value={searchValue} onChange={handleSearchInput} placeholder='Search cars, Brand, Year.......'/>
                 {/* Mdclose icon => clear search input */}
-                  <MdClose style={{fontSize: '24px', color: '#243773', cursor: 'pointer'}}/>
+                  <MdClose onClick={resetSearchInput} style={{fontSize: '24px', color: '#243773', cursor: 'pointer'}}/>
                 </form>
                 </div>
             
@@ -259,7 +260,7 @@ const typographyStyle = {
   
             <div style={{display: 'flex'}}>
                 <Link href="/faq">
-                 <a className='faq-lg-link d-none d-lg-block'>FAQ</a> 
+                 <a className='faq-lg-link d-none d-lg-block' style={{fontWeight: `${faqWeight}`, fontSize: `${faqSize}`}}>FAQ</a> 
                  </Link>
            </div>
             </div>
@@ -276,7 +277,9 @@ export default Nav
 Nav.defaultProps = {
   buyLinkDisplay: 'block',
   searchFormDisplay: 'none',
-  smSearchFormDisplay: 'none'
+  smSearchFormDisplay: 'none',
+  faqSize: '18px',
+  faqWeight: '500'
 }
 
 // if nav searchFormDisplay is flex then set first child to none

@@ -1,0 +1,649 @@
+
+.sell_car_header{
+   display: block;
+   width: 100%;
+   margin: 50px auto 1000px; 
+   height: 310px;
+   background-color:#243773;
+   background-size: 100%;
+}
+   
+
+.sell_car_title{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   color: #fff;
+   padding: 50px 0 10px;
+}
+
+.sell_car_title h1{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.sell_car_title p{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.tab-Div{
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 327px;
+    box-shadow: 0px 4px 16px rgb(0 0 0 / 25%);
+    border-radius: 8px;
+    color: #212529;
+    background-color: #fff;
+}
+
+.sell_car_vehicle_info {
+    border-bottom: 2px solid #243773 !important;
+}
+
+#uncontrolled-tab-example-tab-vin {
+    border-radius: 8px 0 0 0 !important;
+}
+#uncontrolled-tab-example-tab-license-plate {
+   margin: 0 10px !important;
+}
+
+#uncontrolled-tab-example-tab-make_model {
+    border-radius: 0 8px 0 0 !important;
+}
+
+.sell_car_vehicle_info .nav-link{
+        height: 34px !important;
+        background: 0 0 !important;
+        font-weight: 500 !important;
+        padding: 10px !important;
+        width: 97px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        display: flex !important;
+        font-size: 12px !important;
+        margin: 0 !important;
+        color: #111 !important;
+        box-shadow: 0px 2px 4px rgb(0 0 0 / 25%) !important;
+        border: none !important;
+        border-radius: 0 !important;
+}      
+
+.sell_car_vehicle_info .nav-link:focus-visible{
+    outline: none;
+}
+
+.sell_car_vehicle_info .nav-link.active {
+    color: #fff !important;
+    background-color: #243773 !important;
+    border: none !important;
+}
+
+.vin-container{
+    display: block;
+    margin: 50px auto 5px;
+    padding: 2px 16px;
+}
+
+.license-plate-container{
+    display: block;
+    margin: 40px auto 5px;
+    padding: 2px 16px;
+}
+
+
+
+.vin-container h2,
+.license-plate-container h2,
+.make_model-container h2{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+
+.vin-container a{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #243773;
+}
+
+
+.vin-container .vin-form{
+    margin: 24px auto;
+    padding: 0 10px;
+}
+
+.license-plate-container .license-plate-form{
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.vin-container .vin-form label, .license-plate-container .license-plate-form label, .make_model-form label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.vin-container .vin-form input{
+    margin: 4px 0;
+    padding: 8px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #212120;
+    border-radius: 4px;
+}
+
+.license-plate-container .license-plate-form input{
+    margin: -3px 0 20px;
+    padding: 8px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #212120;
+    border-radius: 4px;
+}
+
+.vin-container .vin-form input::placeholder, .license-plate-container .license-plate-form input::placeholder{
+    color: #243773;
+    opacity: 0.5;
+}
+
+
+.vin-container .vin-form .submit-btn,
+ .license-plate-container .license-plate-form .submit-btn,
+ .make_model-container .make_model-form .submit-btn{
+    margin: 16px auto;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    height: 40px;
+    background: #243773;
+    border-radius: 4px;
+}
+
+#reg_state{
+    display: block;
+    margin: -3px 0 0;   
+    padding: 8px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #212120;
+    border-radius: 4px;
+    color: rgb(36 55 115 / 50%);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='darkblue' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") ;
+}
+
+
+#reg_state:focus{
+    border-color: #212120;
+    box-shadow: none;
+}
+
+.make_model-container{
+    margin: 30px auto 10px;
+    padding: 0 30px;
+}
+
+.make_model-container h2{
+    text-align: center;
+}
+
+.make_model-container p{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+.make_model-form  .select-search__input {
+    display: block;
+    /* height: 36px; */
+    width: 100%;
+    padding: 0 16px;
+    background: transparent;
+    border: 1px solid transparent;
+    outline: none;
+    text-align: left;
+    text-overflow: ellipsis;
+    line-height: 36px;
+    -webkit-appearance: none;
+  }
+
+.make_model-form #make_model_select{
+    margin: -3px 0 20px;
+    height: 40px;
+    background-color: #F0F0F0;
+    width: 100%;
+    border: 1px solid #212120;
+    border-radius: 4px;
+}
+
+.make_model-form #make_model_select:focus{
+    border-color: #212120;
+    box-shadow: none;
+}
+
+.make_model-container .make_model-form button{
+    margin: 0 auto 15px;
+}
+
+.sell_instruction-container{
+    display: block;
+    padding: 0 0 200px;
+ 
+}
+
+/**
+ * Main wrapper
+ */
+ .select-search {
+    /* width: 300px; */
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .select-search *,
+  .select-search *::after,
+  .select-search *::before {
+    box-sizing: inherit;
+  }
+  
+  /**
+  * Value wrapper
+  */
+  .select-search__value {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .select-search__value::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 19px;
+    width: 11px;
+    height: 11px;
+  }
+  
+  /**
+  * Input
+  */
+  .select-search__input {
+    display: block;
+    /* height: 36px; */
+    width: 100%;
+    padding: 0 16px;
+    background: #fff;
+    border: 1px solid transparent;
+    outline: none;
+    text-align: left;
+    text-overflow: ellipsis;
+    line-height: 36px;
+    -webkit-appearance: none;
+  }
+  
+  .select-search__input::-webkit-search-decoration,
+  .select-search__input::-webkit-search-cancel-button,
+  .select-search__input::-webkit-search-results-button,
+  .select-search__input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+  
+  .select-search__input:not([readonly]):focus {
+    cursor: initial;
+  }
+  
+  /**
+  * Options wrapper
+  */
+  .select-search__select {
+    background: #fff;
+    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
+  }
+  
+  /**
+  * Options
+  */
+  .select-search__options {
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+  }
+  
+  .select-search__option.is-highlighted {
+    background: rgba(47, 204, 139, 0.1);
+    padding: 0 16px;
+  }
+
+
+  /**
+  * Option
+  */
+  .select-search__option,
+  .select-search__not-found {
+    display: block;
+    height: 36px;
+    width: 100%;
+    padding: 16px;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .select-search--multiple .select-search__option {
+    height: 18px;
+  }
+  
+ 
+  /**
+  * Group
+  */
+  .select-search__group-header {
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eee;
+    padding: 8px 16px;
+  }
+  
+  /**
+  * States
+  */
+  .select-search.is-disabled {
+    opacity: 0.5;
+  }
+  
+  .select-search.is-loading .select-search__value::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%232F2D37' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");
+    background-size: 11px;
+  }
+  
+  .select-search:not(.is-disabled) .select-search__input {
+    cursor: pointer;
+  }
+  
+  /**
+  * Modifiers
+  */
+  .select-search--multiple {
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .select-search:not(.is-loading):not(.select-search--multiple)
+    .select-search__value::after {
+    transform: rotate(45deg);
+    border-right: 2px solid #243773;
+    border-bottom: 2px solid #243773;
+    pointer-events: none;
+  }
+  
+  .select-search--multiple .select-search__input {
+    cursor: initial;
+  }
+  
+  .select-search--multiple .select-search__input {
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .select-search--multiple:not(.select-search--search) .select-search__input {
+    cursor: default;
+  }
+  
+  .select-search:not(.select-search--multiple) .select-search__select {
+    position: absolute;
+    z-index: 2;
+    top: 44px;
+    right: 0;
+    left: 0;
+    border-radius: 3px;
+    overflow: auto;
+    max-height: 360px;
+  }
+  
+  .select-search--multiple .select-search__select {
+    position: relative;
+    overflow: auto;
+    max-height: 260px;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  .select-search__not-found {
+    height: auto;
+    padding: 16px;
+    text-align: center;
+    color: #888;
+  }
+  
+
+@media (max-width: 327px) {
+    .tab-Div{
+        display: block;
+        margin: 0 auto;
+        padding: 8px;
+        width: 90%;
+        box-shadow: 0px 4px 16px rgb(0 0 0 / 25%);
+        border-radius: 8px;
+        color: #212529;
+        background-color: #fff;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .sell_car_header{
+       margin: 50px auto 1400px; 
+    }
+       
+}
+
+@media (min-width: 992px) {
+    .sell_car_header{
+        display: block;
+        width: 100%;
+        margin: 5px auto 1600px; 
+        height: 521px;
+        background:url(https://res.cloudinary.com/grootretro/image/upload/v1652516552/carpadi-website/car_business_img_jtwnml.png);
+        background-position:top center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 50px 0;
+     }
+
+    .sell_car_title{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color:#243773;
+        padding: 80px 0 70px;
+    }
+        
+    .sell_car_title h1{
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 56px;
+    }
+        
+    .sell_car_title p{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+
+    .tab-Div{
+        width: 538px;
+        box-shadow: 0px 4px 24px rgb(0 0 0 / 25%);
+        border-radius: 16px;
+    }
+
+    .sell_car_vehicle_info .nav-link{
+        height: 56px !important;
+        padding: 16px !important;
+        width: 168px !important;
+        font-size: 16px !important;
+    }   
+
+    #uncontrolled-tab-example-tab-vin {
+        border-radius: 16px 0 0 0 !important;
+    }
+
+    #uncontrolled-tab-example-tab-license-plate {
+        margin: 0 9px !important;
+    }
+
+
+    #uncontrolled-tab-example-tab-make_model {
+        border-radius: 0 16px 0 0 !important;
+    }
+
+    .vin-container{
+        display: block;
+        margin: 50px auto 5px;
+        padding: 2px 50px;
+    }
+
+    .license-plate-container{
+        display: block;
+        margin: 40px auto 5px;
+        padding: 2px 50px;
+    }
+
+
+    .vin-container h2,
+    .license-plate-container h2,
+    .make_model-container h2{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+    .vin-container a{
+        font-weight: 500;
+        line-height: 14px;
+    }
+
+    .vin-container .vin-form{
+        margin: 40px auto;
+        padding: 0;
+    }
+
+    .license-plate-container .license-plate-form{
+        margin: 40px auto;
+        padding: 0 ;
+    }
+
+    .vin-container .vin-form label, .license-plate-container .license-plate-form label, .make_model-form label {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .vin-container .vin-form input{
+        padding: 16px;
+        height: 56px;
+        border-radius: 8px;
+    }
+
+    .license-plate-container .license-plate-form input{
+        margin: 4px 0 40px;
+        padding: 16px;
+        height: 56px;
+        border-radius: 8px;
+    }
+
+
+    .vin-container .vin-form .submit-btn,
+    .license-plate-container .license-plate-form .submit-btn,
+    .make_model-container .make_model-form .submit-btn{
+        margin: 30px auto 10px;
+        padding: 16px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        height: 56px;
+        background: #243773;
+        border-radius: 8px;
+    }
+
+    .license-plate-container .license-plate-form button{
+        margin: 35px auto 0;
+    }
+
+    #reg_state{
+        display: block;
+        margin: 4px 0 0;   
+        padding: 16px;
+        height: 56px;
+        width: 100%;
+        border: 1px solid #212120;
+        border-radius: 8px;
+        color: rgb(36 55 115 / 50%);
+        background-size: 19px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='darkblue' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") ;
+    }
+
+    .make_model-container{
+        margin: 50px auto 10px;
+        padding: 0 50px;
+    }
+
+    .make_model-container h2{
+        text-align: left;
+    }
+
+    .make_model-container p{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 40px 0;
+    }
+
+    .make_model-form #make_model_select{
+        margin: 4px 0 40px;
+        padding: 8px 0;
+        height: 56px;
+        border-radius: 8px;
+
+    }
+
+
+    .sell_instruction-container{
+        background: none;
+    }
+
+    .select-search__option.is-highlighted {
+        background: rgba(47, 204, 139, 0.1);
+        padding: 20px 16px 40px;
+      }
+}
+
+
+@media (min-width: 1280px) {
+    .sell_car_header{
+        display: block;
+        width: 100%;
+        margin: 5px auto 1000px; 
+        height: 821px;
+        background:url(https://res.cloudinary.com/grootretro/image/upload/v1652516552/carpadi-website/car_business_img_jtwnml.png);
+        background-position:top center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 50px 0;
+     }
+}

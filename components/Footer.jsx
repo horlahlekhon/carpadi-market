@@ -9,23 +9,22 @@ export default function Footer() {
 <div className='d-block d-md-none'>
       <div className={footerStyles.footerLinks}>
       <ul>
-       <Link href=''><a>Search Used Cars</a></Link>
-       <Link href=''><a>Search New Cars</a></Link>
-       <Link href=''><a>How to buy a car</a></Link>
+       <Link href='/buy'><a>Search Used Cars</a></Link>
+       <Link href='/buy'><a>Search New Cars</a></Link>
+       <Link href='/faq'><a>How to buy a car</a></Link>
      </ul>
     <ul>
-       <Link href=''><a>Get an offer</a></Link>
-       <Link href=''><a>How to Sell/ Trade a car</a></Link>
+       <Link href='/sell'><a>Get an offer</a></Link>
+       <Link href='/faq'><a>How to Sell/ Trade a car</a></Link>
      </ul>
      <ul>
        <Link href=''><a>About Carpadi</a></Link>
-       <Link href=''><a>Carpadi Reviews</a></Link>
+       <Link href='/#getToReview'><a>Carpadi Reviews</a></Link>
      </ul>
      <ul>
-       <Link href=''><a>FAQ</a></Link>
-       <Link href=''><a>Live Chat</a></Link>
+       <Link href='/faq'><a>FAQ</a></Link>
        <Link href=''><a>Contact us</a></Link>
-       <Link href=''><a>support@carpadi.com</a></Link>
+       <Link href='mailto: support@carpadi.com'><a>support@carpadi.com</a></Link>
      </ul>
       </div>
     
@@ -42,26 +41,25 @@ export default function Footer() {
   <div className={footerStyles.footerLinks}>
       <ul>
         <h2>Shop</h2>
-       <Link href=''><a>Search Used Cars</a></Link>
-       <Link href=''><a>Search New Cars</a></Link>
-       <Link href=''><a>How to buy a car</a></Link>
+       <Link href='/buy'><a>Search Used Cars</a></Link>
+       <Link href='/buy'><a>Search New Cars</a></Link>
+       <Link href='/faq'><a>How to buy a car</a></Link>
      </ul>
     <ul>
       <h2>Sell / Trade</h2>
-       <Link href=''><a>Get an offer</a></Link>
-       <Link href=''><a>How to Sell/ Trade a car</a></Link>
+       <Link href='/sell'><a>Get an offer</a></Link>
+       <Link href='/faq'><a>How to Sell/ Trade a car</a></Link>
      </ul>
      <ul>
        <h2>Learn</h2>
        <Link href=''><a>About Carpadi</a></Link>
-       <Link href=''><a>Carpadi Reviews</a></Link>
+       <Link href='/#getToReview'><a>Carpadi Reviews</a></Link>
      </ul>
      <ul>
        <h2>Help</h2>
-       <Link href=''><a>FAQ</a></Link>
-       <Link href=''><a>Live Chat</a></Link>
+       <Link href='/faq'><a>FAQ</a></Link>
        <Link href=''><a>Contact us</a></Link>
-       <Link href=''><a>support@carpadi.com</a></Link>
+       <Link href='mailto: support@carpadi.com'><a>support@carpadi.com</a></Link>
      </ul>
       </div>
     
