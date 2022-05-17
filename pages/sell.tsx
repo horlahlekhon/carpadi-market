@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
 
 const sell_car = () => {
     const [value, setValue] = useState("");
+    const [makeValue, setMakeValue] = useState("");
+    const [modelValue, setModelValue] = useState("");
+    const [yearValue, setYearValue] = useState("");
+    const [trimValue, setTrimValue] = useState("");
 
     const registeredStatesOptions = [
         {
@@ -413,8 +417,8 @@ const sell_car = () => {
                 <SelectSearch
                    id="make_model_select"
                     options={makeOptions}
-                    value={value}
-                    onChange={setValue}
+                    value={makeValue}
+                    onChange={setMakeValue}
                     search
                     filterOptions={fuzzySearch}
                  />
@@ -434,8 +438,8 @@ const sell_car = () => {
                 <SelectSearch
                    id="make_model_select"
                     options={modelOptions}
-                    value={value}
-                    onChange={setValue}
+                    value={modelValue}
+                    onChange={setModelValue}
                     search
                     filterOptions={fuzzySearch}
                  />
@@ -807,8 +811,8 @@ const sell_car = () => {
                 <SelectSearch
                    id="make_model_select"
                     options={yearOptions}
-                    value={value}
-                    onChange={setValue}
+                    value={yearValue}
+                    onChange={setYearValue}
                     search
                     filterOptions={fuzzySearch}
                  />
@@ -842,8 +846,8 @@ const sell_car = () => {
                 <SelectSearch
                    id="make_model_select"
                     options={trimOptions}
-                    value={value}
-                    onChange={setValue}
+                    value={trimValue}
+                    onChange={setTrimValue}
                     search
                     filterOptions={fuzzySearch}
                  />
