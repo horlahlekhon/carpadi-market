@@ -144,23 +144,23 @@ button.MuiPaginationItem-previousNext.css-19xm0h7-MuiButtonBase-root-MuiPaginati
     }
 
     .car-options .nav-link.active, .nav-pills .show>.nav-link {
-        color: #000 !important;
-        background-color: #ffffff  !important;
-        border-radius: 48px  !important;
-        padding: 8px 16px  !important;
-        width: 123px  !important;
-        text-align: center  !important;
-        height: 37px  !important;
-        font-weight: 600  !important;
-        font-size: 18px  !important;
-        border-bottom: none !important;
+    color: #000 !important;
+    background-color: #ffffff  !important;
+    border-radius: 48px  !important;
+    padding: 8px 16px  !important;
+    width: 123px  !important;
+    text-align: center  !important;
+    height: 37px  !important;
+    font-weight: 600  !important;
+    font-size: 18px  !important;
+    border-bottom: none !important;
     }
 
     .car-options  .nav-link {
         background: 0 0 !important;
         border: 0 !important;
         border-radius: 0.25rem !important;
-        padding: 8px 16px !important;
+        padding: 8px 14px !important;
         cursor: pointer !important;
         /* font-weight: 600; */
         /* font-size: 18px; */

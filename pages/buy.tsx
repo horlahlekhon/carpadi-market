@@ -11,7 +11,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import styled from 'styled-components';
+
 
 
 const BuyCar = () => {
@@ -24,6 +24,48 @@ const BuyCar = () => {
     fourth: false
   })
   
+
+  //nav name and images array
+
+  const carBrandLogo = [
+    {
+      brand: 'lexus',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655219431/carpadi-website/lexus_iktth1.png'
+    },
+    {
+      brand: 'toyota',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655219428/carpadi-website/toyota_zn6edo.png',
+    },
+    {
+      brand: 'mercedes',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655218860/carpadi-website/mercedes_ixmnkb.png'
+    },
+    {
+      brand: 'acura',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655219430/carpadi-website/acura_mw03wj.png'
+    },
+    {
+      brand: 'honda',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655219429/carpadi-website/honda_qsjokt.png'
+    },
+    {
+      brand: 'ford',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655219429/carpadi-website/ford_xsqb2s.png'
+    },
+    {
+      brand: 'peugeot',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655221083/carpadi-website/peugeot_ccs1zn.png'
+    },
+    {
+      brand: 'landrover',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655219432/carpadi-website/land_o9rjgk.png'
+    },
+    {
+      brand: 'mazda',
+      logo: 'https://res.cloudinary.com/grootretro/image/upload/v1655221082/carpadi-website/mazda_vaewhj.png'
+    }
+  ]
+
 
   return (
    
@@ -54,64 +96,64 @@ const BuyCar = () => {
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="second">
-            <img style={{width: '24px', height: '22px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Lexus_drgxhx.png' alt='lexus_logo' />
+            <img style={{width: '28px', height: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1655219431/carpadi-website/lexus_iktth1.png' alt='lexus_logo' />
            Lexus
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="third">
-            <img  src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Toyota_qfm1wt.png' alt="toyota_logo"/>
+            <img style={{width: '28px', height: '24px'}}   src='https://res.cloudinary.com/grootretro/image/upload/v1655219428/carpadi-website/toyota_zn6edo.png' alt="toyota_logo"/>
             Toyota
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="fourth">
-          <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Mercedes_Benz_tegkjz.png' alt="benz_logo"/>
-            Benz
+          <img style={{width: '28px', height: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1655218860/carpadi-website/mercedes_ixmnkb.png' alt="benz_logo"/>
+            Mercedes Benz
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="fifth">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Acura_pw01yn.png' alt='acura_logo' />
+            <img style={{width: '28px', height: '24px'}}   src='https://res.cloudinary.com/grootretro/image/upload/v1655219430/carpadi-website/acura_mw03wj.png' alt='acura_logo' />
             Acura
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="sixth">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Honda_b2yas6.png' alt='honda_logo'/>
+            <img style={{width: '28px', height: '24px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655219429/carpadi-website/honda_qsjokt.png' alt='honda_logo'/>
             Honda
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="seventh">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Hyundai_nhnrbq.png' alt='hyundai_logo'/>
+            <img style={{width: '28px', height: '24px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655219429/carpadi-website/ford_xsqb2s.png' alt='hyundai_logo'/>
             Ford
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="eighth">
-            <img style={{width: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Peugeot_ssqbxp.png' alt='peugeot_logo' />
+            <img style={{width: '28px', height: '24px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655221083/carpadi-website/peugeot_ccs1zn.png' alt='peugeot_logo' />
             Peugeot
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="ninth">
-            <img style={{width: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Land_Rover_ucj52i.png' alt='landRover_logo'/>
+            <img style={{width: '28px', height: '24px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655219432/carpadi-website/land_o9rjgk.png' alt='landRover_logo'/>
             Land Rover
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="tenth">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Mazda_wl2eyt.png' alt='mazda_logo' />
+            <img style={{width: '28px', height: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Mazda_wl2eyt.png' alt='mazda_logo' />
             Mazda
           </Navigation.Link>
         </Navigation.Item>
-        <Navigation.Item>
+        {/* <Navigation.Item>
           <Navigation.Link eventKey="eleventh">
             <br />
             See More
           </Navigation.Link>
-        </Navigation.Item>
+        </Navigation.Item> */}
     
       </Navigation>
       <Tab.Content>
@@ -473,64 +515,64 @@ const BuyCar = () => {
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="second">
-            <img style={{width: '24px', height: '22px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Lexus_drgxhx.png' alt='lexus_logo' />
+            <img style={{width: '30px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1655219431/carpadi-website/lexus_iktth1.png' alt='lexus_logo' />
            Lexus
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="third">
-            <img  src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Toyota_qfm1wt.png' alt="toyota_logo"/>
+            <img style={{width: '30px'}}   src='https://res.cloudinary.com/grootretro/image/upload/v1655219428/carpadi-website/toyota_zn6edo.png' alt="toyota_logo"/>
             Toyota
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="fourth">
-          <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Mercedes_Benz_tegkjz.png' alt="benz_logo"/>
-            Benz
+          <img style={{width: '30px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1655218860/carpadi-website/mercedes_ixmnkb.png' alt="benz_logo"/>
+            Mercedes Benz
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="fifth">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Acura_pw01yn.png' alt='acura_logo' />
+            <img style={{width: '30px'}}   src='https://res.cloudinary.com/grootretro/image/upload/v1655219430/carpadi-website/acura_mw03wj.png' alt='acura_logo' />
             Acura
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="sixth">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Honda_b2yas6.png' alt='honda_logo'/>
+            <img style={{width: '30px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655219429/carpadi-website/honda_qsjokt.png' alt='honda_logo'/>
             Honda
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="seventh">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Hyundai_nhnrbq.png' alt='hyundai_logo'/>
+            <img style={{width: '30px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655219429/carpadi-website/ford_xsqb2s.png' alt='hyundai_logo'/>
             Ford
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="eighth">
-            <img style={{width: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320290/carpadi-website/Peugeot_ssqbxp.png' alt='peugeot_logo' />
+            <img style={{width: '30px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655221083/carpadi-website/peugeot_ccs1zn.png' alt='peugeot_logo' />
             Peugeot
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="ninth">
-            <img style={{width: '24px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Land_Rover_ucj52i.png' alt='landRover_logo'/>
+            <img style={{width: '30px'}}  src='https://res.cloudinary.com/grootretro/image/upload/v1655219432/carpadi-website/land_o9rjgk.png' alt='landRover_logo'/>
             Land Rover
           </Navigation.Link>
         </Navigation.Item>
         <Navigation.Item>
           <Navigation.Link eventKey="tenth">
-            <img src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Mazda_wl2eyt.png' alt='mazda_logo' />
+            <img style={{width: '30px'}} src='https://res.cloudinary.com/grootretro/image/upload/v1651320289/carpadi-website/Mazda_wl2eyt.png' alt='mazda_logo' />
             Mazda
           </Navigation.Link>
         </Navigation.Item>
-        <Navigation.Item>
+        {/* <Navigation.Item>
           <Navigation.Link eventKey="eleventh">
             <br />
             See More
           </Navigation.Link>
-        </Navigation.Item>
+        </Navigation.Item> */}
     
       </Navigation>
   <div style={{padding: '40px 40px 0'}}>
