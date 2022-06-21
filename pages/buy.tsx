@@ -54,8 +54,8 @@ const BuyCar = () => {
             Recommended
             </Navigation.Link>
         </Navigation.Item>
-        {carBrandLogo.map(({eventKey, brand, logo, index}) => (
-          <Navigation.Item key={index}>
+        {carBrandLogo.map(({eventKey, brand, logo, id}) => (
+          <Navigation.Item key={id}>
             <Navigation.Link eventKey={eventKey}>
               <img style={{width: '28px', height: '24px'}} src={logo} alt={brand} />
                {brand.charAt(0).toUpperCase() + brand.slice(1)}
@@ -349,8 +349,8 @@ const BuyCar = () => {
             Recommended
             </Navigation.Link>
         </Navigation.Item>
-        {carBrandLogo.map(({eventKey, brand, logo, index}) => (
-          <Navigation.Item key={index}>
+        {carBrandLogo.map(({eventKey, brand, logo, id}) => (
+          <Navigation.Item key={id}>
             <Navigation.Link eventKey={eventKey}>
               <img style={{width: '30px'}} src={logo} alt={brand} />
                {brand.charAt(0).toUpperCase() + brand.slice(1)}
@@ -390,8 +390,8 @@ const BuyCar = () => {
             change if necessary */}
             <div>
             <h4 className='brand-title'>Brands</h4>           
-              {carBrandLogo.map(({brand, index}) => (
-                <div key={index}>
+              {carBrandLogo.map(({brand, id}) => (
+                <div key={id}>
                   <input className='input-options' type="radio" name="brand" value={brand} /> 
                   <span className='input-text'>{brand.charAt(0).toUpperCase() + brand.slice(1)}</span><br />
                   </div>
@@ -400,8 +400,8 @@ const BuyCar = () => {
             change if necessary */}
             <h4 className='model-title'>Models</h4>
   
-              {models.map(({model, index}) => (
-                <div key={index}>
+              {models.map(({model, id}) => (
+                <div key={id}>
                   <input className='input-options' type="radio" name="model" value={model} /> 
                   <span className='input-text'>{model.charAt(0).toUpperCase() + model.slice(1)}</span><br />
                   </div>
