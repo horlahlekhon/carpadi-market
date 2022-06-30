@@ -6,8 +6,28 @@ import { AiOutlineSearch } from "react-icons/ai";
 import Howitworks from '../components/Howitworks.jsx'
 import Review from '../components/Review'
 import ViewCar from '../components/ViewCar'
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const Home: NextPage = () => {
+
+
+  useEffect(() => {
+
+    const auth = {
+      username: 'lekan',
+      password: 'secret',
+    };
+  
+
+
+    axios.post('https://carpadi.herokuapp.com/api/v1/auth/login/', auth   
+     ).then((res) => console.log(res))
+      .catch(err => console.log(err))
+
+    
+  }, [])
+  
 
 
   return (
